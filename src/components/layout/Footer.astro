@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
+
+const [staticData] = await getCollection("staticData");
+
+const { youtubeIconName, instagramIconName } = staticData.data;
+---
+
+<footer>
+	<ul class="flex gap-2 items-center">
+		<li>
+			<Icon name={youtubeIconName} title="YouTube" class="size-10 "/>
+		</li>
+		<li>            
+            <Icon name={instagramIconName} title="Instagram" class="size-8"/>
+        </li>
+		<li></li>
+	</ul>
+</footer>
