@@ -7,14 +7,16 @@ const [staticData] = await getCollection("staticData");
 const { youtubeIconName, instagramIconName } = staticData.data;
 ---
 
-<footer>
+<footer class="bg-slate-900 w-full h-48 py-4 px-1 md:px-20">
 	<ul class="flex gap-2 items-center">
-		<li>
-			<Icon name={youtubeIconName} title="YouTube" class="size-10 "/>
+		<li class="text-white">
+			<p>Youtube</p>
+			<Icon name={youtubeIconName} title="YouTube" class="size-8" />
 		</li>
-		<li>            
-            <Icon name={instagramIconName} title="Instagram" class="size-8"/>
-        </li>
+		<li class="text-white">
+			<p>Instagram</p>
+			<Icon name={instagramIconName} title="Instagram" class="size-8 text-white" />
+		</li>
 		<li></li>
 	</ul>
 </footer>
