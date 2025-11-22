@@ -1,0 +1,98 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<button
+  id="themeToggle"
+  aria-label="themeToggle"
+  class="hover:cursor-pointer hover:text-mint-400 transition-all"
+>
+  <Icon name="sun" class="sun" />
+  <Icon name="moon" class="moon" />
+</button>
+
+<style>
+  /* Basic styling to make the button look like an icon only */
+  #themeToggle {
+    border: 0;
+    background: none;
+  }
+  /* Initial state: show sun (light mode) */
+  .sun {
+    display: block;
+  }
+  /* Initial state: hide moon (light mode) */
+  .moon {
+    display: none;
+  }
+  /* When the <html> element has the 'dark' class: */
+  :global(.dark) .sun {
+    display: none;
+  }
+  :global(.dark) .moon {
+    display: block;
+  }
+</style>
+
+<script is:inline>
+  // Execute immediately before the page loads
+  (function () {
+    // Function to determine the initial theme preference
+    const theme = (() => {
+      // 1. Check for user's manually saved preference in localStorage
+      if (
+        typeof localStorage !== "undefined" &&
+        localStorage.getItem("theme")
+      ) {
+        return localStorage.getItem("theme");
+      }
+      // 2. Check for system/OS preference (prefers-color-scheme)
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return "dark";
+      }
+      // 3. Default to light mode
+      return "light";
+    })();
+
+    // Apply the determined theme class to the root HTML element
+    if (theme === "light") {
+      document.documentElement.classList.remove("dark");
+    } else {
+      document.documentElement.classList.add("dark");
+    }
+    // Store the current theme in localStorage for persistence
+    window.localStorage.setItem("theme", theme);
+  })();
+
+  // Listen for changes in system preferences (e.g., user changes OS theme while page is open)
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+      // ONLY react to system changes if the user hasn't explicitly set a theme
+      if (!localStorage.getItem("theme")) {
+        // e.matches is true if the system preference is now dark
+        if (e.matches) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }
+    });
+
+  // Function to handle manual theme toggling via button click
+  const handleToggleClick = () => {
+    const element = document.documentElement;
+    // Toggle the 'dark' class on the <html> element
+    element.classList.toggle("dark");
+
+    // Check the resulting state after toggling
+    const isDark = element.classList.contains("dark");
+    // Save the new preference to localStorage
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  };
+
+  // Attach the click handler to the theme toggle button
+  document
+    .getElementById("themeToggle")
+    .addEventListener("click", handleToggleClick);
+</script>
