@@ -1,2 +1,26 @@
 ---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+	iconName: string;
+	link: string;
+	label?: string;
+}
+
+const { iconName, link, label } = Astro.props;
+
+// validate required props
+if (!iconName || !link) {
+	throw new Error("Social components requires both iconName and link props");
+}
 ---
+
+<a
+	class="inline-block hover:text-blue-500 hover:scale-150 transition-all ease-in-out"
+	href={link}
+	target="_blank"
+	rel="noopener noreferrer"
+	aria-label={label}
+>
+	<Icon class="size-5" name={iconName} title={iconName} aria-hidden="true"/>
+</a>
