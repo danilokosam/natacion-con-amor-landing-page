@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+
+const [staticData] = await getCollection("staticData");
+
+const {
+	contactSectionTitle,
+	contactSectionSubtitle,
+	contactSectionButtonText,
+	email,
+	contactSectionButtonIcon,
+} = staticData.data;
+---
+
+<section>
+	<div class="w-full border-b bg-linear-to-b from-mint-100 to-transparent dark:from-mint-800 dark:border-mint-950 border-mint-100">
+        <div class="mx-auto max-w-5xl px-8 py-24 max-sm:py-12">
+            <div class="max-w-lg">
+                <!-- TODO: Crear heading component -->
+                <p>{contactSectionTitle}</p>
+                <p>{contactSectionSubtitle}</p>
+          <!-- <Heading
+            text={contactSectionTitle}
+            textGradient={contactSectionSubtitle}
+            level={2}
+          /> -->
+        </div>
+        </div>
+    </div>
+</section>
