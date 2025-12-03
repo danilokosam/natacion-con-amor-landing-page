@@ -4,21 +4,49 @@ import Social from "../ui/Social.astro";
 
 const [staticData] = await getCollection("staticData");
 
-const { youtubeIconName, instagramIconName, youtube, instagram, profileName } = staticData.data;
+const { youtubeIconName, instagramIconName, youtube, instagram, profileName, alias } =
+	staticData.data;
 ---
 
 <footer
-	class="flex flex-col md:flex-row md:justify-between  items-center gap-2 border border-slate-500/30 border-b-0 border-x-0 dark:bg-slate-900 w-full h-40 md:h-20 py-4 px-1 md:px-16 lg:px-52"
+	class="w-full h-40 md:h-20 text-slate-950 dark:text-slate-50 border border-slate-500/30 border-b-0 border-x-0 dark:bg-slate-900"
 >
-	<h3 class="text-2xl font-bold mb-2">{profileName}</h3>
-	<p>Developed by</p>
+	<nav
+		class="flex flex-col md:flex-row md:justify-between mx-auto max-w-7xl align-middle items-center gap-2 py-4 px-2"
+		aria-label="Footer navigation"
+	>
+		<div
+			class="relative w-fit h-6 text-2xl font-bold cursor-pointer before:absolute before:left-1/2 before:top-1/2 before:h-full before:w-[40%] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-[#50fd8f25] before:blur-3xl before:opacity-80 before:-z-1 hover:text-mint-500 transition-all [text-shadow:0_1px_2px_#000]"
+		>
+			<a href="/" aria-label="Return to homepage">
+				<!-- This icon represents the logo -->
+				<!-- <Icon name="logo" aria-hidden="true" /> -->
+				{profileName}
+			</a>
+		</div>
 
-	<ul class="flex gap-2 items-center">
-		<li>
-			<Social iconName={youtubeIconName} link={youtube} />
-		</li>
-		<li>
-			<Social iconName={instagramIconName} link={instagram} />
-		</li>
-	</ul>
+		<div class="text-start">
+			<a
+				href={"github"}
+				class="flex items-center justify-center gap-3 text-base font-normal italic max-sm:text-sm"
+				aria-label="About the website development"
+			>
+				<!-- <Icon name="code" aria-hidden="true" /> Developed by <strong
+          >{alias}</strong
+        > -->
+				Developed by <strong>{alias},</strong> with Astro
+			</a>
+		</div>
+
+		<ul
+			class="flex w-48 justify-end gap-2 align-middle items-center text-slate-950 dark:text-slate-50"
+		>
+			<li class="pt-2">
+				<Social iconName={instagramIconName} link={instagram} />
+			</li>
+			<li class="pt-2 scale-110">
+				<Social iconName={youtubeIconName} link={youtube} />
+			</li>
+		</ul>
+	</nav>
 </footer>
