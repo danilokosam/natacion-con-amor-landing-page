@@ -1,5 +1,5 @@
 
-<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
     <circle cx="17" cy="7" r="1.5" fill="currentColor" fill-opacity="0">
         <animate fill="freeze" attributeName="fill-opacity" begin="1.3s" dur="0.15s" values="0;1" />
     </circle>
