@@ -18,15 +18,16 @@ const {
 	<div
 		class="w-full border-b bg-linear-to-b from-mint-100 to-transparent dark:from-mint-800 dark:border-mint-950 border-mint-100"
 	>
-		<div class="mx-auto max-w-5xl px-8 py-24 max-sm:py-12">
+		<div class="mx-auto px-8 py-24 max-sm:py-12 max-w-5xl flex flex-col gap-4 items-center md:flex-row md:justify-between">
 			<div class="max-w-lg">
+
 				<Heading
-					text={contactSectionTitle}
-					textGradient={contactSectionSubtitle}
-					level={1}
+				text={contactSectionTitle}
+				textGradient={contactSectionSubtitle}
+				level={1}
 				/>
-        <Button text={contactSectionButtonText} link="hahah" variant={"dark"} />
 			</div>
+			<Button text={contactSectionButtonText} link="hahah" variant={"dark"} />
 		</div>
 	</div>
 </section>
