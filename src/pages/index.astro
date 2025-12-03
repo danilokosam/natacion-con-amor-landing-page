@@ -1,20 +1,12 @@
 ---
-import Footer from "../components/layout/Footer.astro";
-import Header from "../components/layout/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import HeroIndex from "../components/homepage/HeroIndex.astro";
+import { getCollection } from "astro:content";
 
-import "../styles/global.css";
+const [staticData] = await getCollection("staticData");
+const { pageTitle, pageDescription } = staticData.data;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<Header />
-		<Footer />
-	</body>
-</html>
+<Layout pageTitle={pageTitle} description={pageDescription}>
+  <HeroIndex />
+</Layout>

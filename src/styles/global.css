@@ -42,7 +42,11 @@
     }
   }
 }
-
+@property --border-angle{
+	  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
 ::selection {
   @apply text-white bg-mint-500;
 }

@@ -23,6 +23,9 @@ const jsonDataCollection = defineCollection({
     hobbies: z.array(z.string()),
     pageTitle: z.string(),
     pageDescription: z.string(),
+    classesImage: z.string(),
+    github: z.string().url(),
+    githubText: z.string(),
   }),
 });
 
