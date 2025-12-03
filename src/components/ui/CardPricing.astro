@@ -1,0 +1,11 @@
+---
+const {image} = Astro.props;
+
+
+---
+
+<article class="group">
+     <div class="overflow-hidden rounded-xl">
+      <img class="h-auto rounded-xl transition-all duration-300 ease-in-out group-hover:scale-105" src={image.url} alt={image.alt} />
+    </div>
+</article>
