@@ -6,7 +6,7 @@ description: 'Clases de natación de 1 hora, en grupos reducidos de máximo 4 al
 messageCta: 'Perfecto para comenzar tu jornada acuática'
 classesQuantity: "4"
 classesPrice: "160€"
-recommended: true
+recommended: false
 incluye:
   - "4 clases"
   - "4 horas de clase"

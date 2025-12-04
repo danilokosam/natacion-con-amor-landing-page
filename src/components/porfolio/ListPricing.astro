@@ -5,7 +5,7 @@ const allPosts = await Astro.glob("../../pages/pricingCollections/*.md");
 
 ---
 
-<section class='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-8' >
+<section class='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-8 xl:px-0 py-8 ' >
 
 {allPosts.map(post => {
     return (
