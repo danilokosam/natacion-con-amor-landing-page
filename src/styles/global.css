@@ -54,11 +54,11 @@
   border-radius: 20px;
 }
 .dark * {
-  scrollbar-color: #60a5fa #012d22;
+  scrollbar-color: #60a5fa #0E0E11;
   scrollbar-width: thin;
 }
 * {
-  scrollbar-color: #60a5fa #d0fbe5;
+  scrollbar-color: #60a5fa #0E0E11;
   scrollbar-width: thin;
   box-sizing: border-box;
 }
