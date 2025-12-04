@@ -1,11 +1,30 @@
 ---
-const {image} = Astro.props;
+import Heading from "./Heading.astro";
+import Button from "./Button.astro";
 
+const { title, classesPrice, messageCta, incluye, recommended } = Astro.props;
 
+const isRecommended = recommended ? "bg-linear-to-r from-mint-600 dark:from-mint-600 " : "";
 ---
 
-<article class="group">
-     <div class="overflow-hidden rounded-xl">
-      <img class="h-auto rounded-xl transition-all duration-300 ease-in-out group-hover:scale-105" src={image.url} alt={image.alt} />
-    </div>
+<article
+	class=` max-h-auto max-w-md rounded-2xl bg-linear-to-r from-mint-300 dark:from-mint-600 to-mint-50 dark:to-mint-200/5 hover:to-mint-300/30 dark:hover:to-mint-600/30 p-[.2rem]`
+>
+	<div
+		class="group relative z-0 flex flex-col h-full items-start justify-start gap-4 overflow-hidden rounded-2xl bg-linear-to-tr from-riptide-100 to-white p-4 transition-all hover:shadow-[0_10px_50px_rgba(59,130,246,0.2)] dark:bg-linear-to-r dark:from-mint-950 dark:to-zinc-950 dark:overflow-hidden max-md:w-full max-md:gap-3 max-lg:gap-2 max-sm:flex-col dark:before:bg-[radial-gradient(circle,rgba(59,130,246)_0,rgba(23,37,84)_100%)] before:bg-[radial-gradient(circle,rgba(153,204,255)_0,rgba(189,222,255)_100%)] before:absolute before:left-65 before:top-10 before:h-[40%] before:aspect-square before:rounded-full before:blur-3xl before:opacity-80 before:-z-10 before:transition hover:before:animate-pulse"
+	>
+		<Heading text={title} level={3} />
+		<span>{messageCta}</span>
+		<p><strong class="font-bold text-2xl md:text-3xl">{classesPrice}</strong> /mes</p>
+
+		<Button class="w-full bg-red-500" link="#" text="Comienza ahora" />
+
+		<ul class="list-disc px-4">
+			{
+				incluye.map((list: string) => {
+					return <li>{list}</li>;
+				})
+			}
+		</ul>
+	</div>
 </article>

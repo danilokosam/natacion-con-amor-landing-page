@@ -1,3 +1,18 @@
 ---
+import CardPricing from "../ui/CardPricing.astro";
 
+const allPosts = await Astro.glob("../../pages/pricingCollections/*.md");
+console.log("🚀 ~ Número de posts:", allPosts.length)
+console.log("🚀 ~ Frontmatter:", allPosts.map(post => post.frontmatter))
+console.log("🚀 ~ URLs:", allPosts.map(post => post.url))
 ---
+
+<section class='' >
+
+{allPosts.map(post => {
+    return (
+        <CardPricing {...post.frontmatter} />
+    )
+})}
+    
+</section>

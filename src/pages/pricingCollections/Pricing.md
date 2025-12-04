@@ -1,8 +1,17 @@
-layout:  /src/layouts/PricingLayout.astro
-title: 'Plan Básico'
+---
+layout: ../../layouts/Layout.astro
 pubDate: 2025-04-05
-description: 'NeonMint is a modern, minimalist template crafted for developers and digital creatives.'
-languages: ["astro", "tailwind", "cloudflare", "javascript","vercel"]
+title: 'Plan Básico 4'
+description: 'Clases de natación de 1 hora, en grupos reducidos de máximo 4 alumnos, enfocadas en mejorar técnica, confianza y habilidades básicas en un ambiente seguro y personalizado.'
+messageCta: 'Perfecto para comenzar tu jornada acuática'
+classesQuantity: "4"
+classesPrice: "160€"
+recommended: true
+incluye:
+  - "4 clases"
+  - "1 hora de clase"
+  - "Instructor certificado"
+  - "Grupos reducidos (máx 4 personas)"
 image: 
   url: "https://placehold.co/600x400"
   alt: "Thumbnail of Astro arches."
