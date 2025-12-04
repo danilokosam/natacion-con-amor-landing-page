@@ -9,7 +9,7 @@ classesPrice: "160€"
 recommended: true
 incluye:
   - "4 clases"
-  - "1 hora de clase"
+  - "4 horas de clase"
   - "Instructor certificado"
   - "Grupos reducidos (máx 4 personas)"
 image: 
