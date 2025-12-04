@@ -10,13 +10,13 @@ const { instagram, instagramIconName, youtube, youtubeIconName } =
   staticData.data;
 
 const currentPath = Astro.url.pathname;
-const routes = ["/", "/plans", "/about-me"];
+const routes = ["/", "/planes", "/acerca-de-mi"];
 
 // Check if the current route is in the list of routes
 const isActiveRoute = routes.includes(currentPath);
 
 const navItems = isActiveRoute
-  ? ["home", "experience", "plans", "about"]
+  ? ["home", "plans", "classes", "about"]
   : ["home", "plans", "about"];
 ---
 

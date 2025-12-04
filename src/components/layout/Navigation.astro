@@ -15,15 +15,15 @@ const { items = [] }: { items: (keyof typeof menu)[] } = Astro.props as {
 
 // Define the structure of the navigation menu with names and paths for each item.
 const menu = {
-  about: { name: "About Me", path: "/about-me" },
+  about: { name: "Acerca de mi", path: "/acerca-de-mi" },
   // blog: {
   //   name: "Blog",
   //   path: "/blog/",
   //   dropdown: [{ name: "All Posts", path: "/blog/posts/" }],
   // },
-  home: { name: "Home", path: "/#home" },
-  experience: { name: "Experience", path: "/#experience" },
-  plans: { name: "Plans", path: "/#plans" },
+  home: { name: "Inicio", path: "/#inicio" },
+  classes: { name: "Clases", path: "/#clases" },
+  plans: { name: "Planes", path: "/#planes" },
 };
 
 // Define common base classes for styling the navigation components.
