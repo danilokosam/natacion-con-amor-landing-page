@@ -1,12 +1,13 @@
 ---
 layout: ../../layouts/Layout.astro
 pubDate: 2025-04-05
-title: 'Plan Básico 4'
+title: 'Plan Flexible 4'
 description: 'Clases de natación de 1 hora, en grupos reducidos de máximo 4 alumnos, enfocadas en mejorar técnica, confianza y habilidades básicas en un ambiente seguro y personalizado.'
-messageCta: 'Perfecto para comenzar tu jornada acuática'
+messageCta: 'Máxima adaptabilidad para dar tus primeras brazadas'
 classesQuantity: "4"
 classesPrice: "160€"
 recommended: false
+plan: 1
 incluye:
   - "4 clases"
   - "4 horas de clase"

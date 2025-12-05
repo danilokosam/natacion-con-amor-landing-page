@@ -1,16 +1,54 @@
 ---
 import CardPricing from "../ui/CardPricing.astro";
+import { getCollection } from "astro:content";
+import Heading from "../ui/Heading.astro";
+
+const [staticData] = await getCollection("staticData");
+
+const { pricingPlanOneSubtitle, pricingPlanOneTitle, pricingPlanTwoTitle, pricingPlanTwoSubtitle } =
+	staticData.data;
 
 const allPosts = await Astro.glob("../../pages/pricingCollections/*.md");
-
 ---
 
-<section class='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-8 xl:px-0 py-8 ' >
+<dir
+	class="w-full max-w-7xl flex flex-col gap-20 mx-auto text-center px-4 sm:px-8 xl:px-0 py-24 max-sm:py-12"
+>
+	<div class="flex flex-col gap-2">
+		<Heading level={2} textGradient={pricingPlanOneTitle} />
+		<p class="text-md md:text-xl text-mint-950/80 dark:text-mint-50/80">
+			{pricingPlanOneSubtitle}
+		</p>
+	</div>
 
-{allPosts.map(post => {
-    return (
-        <CardPricing {...post.frontmatter} />
-    )
-})}
-    
-</section>
+	<section class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+		{
+			allPosts
+				.filter((post) => post.frontmatter.plan === 1)
+				.map((post) => {
+					return <CardPricing {...post.frontmatter} />;
+				})
+		}
+	</section>
+</dir>
+<dir
+	class="w-full max-w-7xl flex flex-col gap-20 mx-auto text-center px-4 sm:px-8 xl:px-0 py-24 max-sm:py-12"
+>
+	<div class="flex flex-col gap-2">
+		<Heading level={2} textGradient={pricingPlanTwoTitle} />
+		<p class="text-md md:text-xl text-mint-950/80 dark:text-mint-50/80">
+			{pricingPlanTwoSubtitle}
+		</p>
+	</div>
+	<section
+		class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-8 xl:px-0 py-8"
+	>
+		{
+			allPosts
+				.filter((post) => post.frontmatter.plan === 2)
+				.map((post) => {
+					return <CardPricing {...post.frontmatter} />;
+				})
+		}
+	</section>
+</dir>

@@ -1,20 +1,27 @@
 ---
+import { getCollection } from "astro:content";
 import Heading from "./Heading.astro";
 import Button from "./Button.astro";
 
-const { title, classesPrice, messageCta, incluye, recommended } = Astro.props;
+const [staticData] = await getCollection("staticData");
 
+const { pricingButtonText } = staticData.data;
+
+const { title, classesPrice, messageCta, incluye, recommended } = Astro.props;
 ---
 
-<article class:list={[
-  'relative group max-h-auto dark:text-white rounded-2xl p-[.2rem]',
-  'bg-linear-to-r to-mint-50 dark:to-mint-200/5',
-  'hover:to-mint-300/30 dark:hover:to-mint-600/30 ',
-  {
-    'to-mint-600 hover:to-mint-600 from-mint-600 dark:to-mint-50 dark:from-mint-50 scale-110': recommended,
-    'from-mint-300 dark:from-mint-600': !recommended
-  }
-]}>
+<article
+	class:list={[
+		"relative group max-h-auto dark:text-white rounded-2xl p-[.2rem]",
+		"bg-linear-to-r to-mint-50 dark:to-mint-200/5",
+		"hover:to-mint-300/30 dark:hover:to-mint-600/30 ",
+		{
+			"to-mint-600 hover:to-mint-600 from-mint-600 dark:to-mint-50 dark:from-mint-50 ":
+				recommended,
+			"from-mint-300 dark:from-mint-600": !recommended,
+		},
+	]}
+>
 	{
 		recommended && (
 			<div class="absolute -top-4 left-1/2 -translate-x-1/2 z-20 text-mint-50 bg-mint-500 px-4 py-1 rounded-lg">
@@ -31,9 +38,9 @@ const { title, classesPrice, messageCta, incluye, recommended } = Astro.props;
 			<strong class="font-bold text-2xl md:text-3xl text-mint-600">{classesPrice}</strong> /mes
 		</p>
 
-		<Button link="#" text="Comienza ahora" />
+		<Button link="#" text={pricingButtonText} />
 
-		<ul class="list-disc px-4">
+		<ul class="list-disc px-4 text-start">
 			{
 				incluye.map((list: string) => {
 					return <li>{list}</li>;
