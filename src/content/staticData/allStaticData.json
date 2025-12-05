@@ -18,6 +18,11 @@
     "youtubeIconName": "youtube",
     "emailIconName": "envelope",
     "classesImage": "pending",
+    "pricingPlanOneTitle": "Planes de Frecuencia Semanal",
+    "pricingPlanOneSubtitle": "Planes pensados para personas que buscan una frecuencia de una o dos veces por semana. Son ideales para principiantes o para quienes tienen una agenda más apretada.",
+    "pricingPlanTwoTitle": "Planes de Alto Rendimiento",
+    "pricingPlanTwoSubtitle": "Diseñado para quienes desean entrenar más de dos veces por semana o maximizar su progreso. Es perfecta para alumnos avanzados o con objetivos específicos.",
+    "pricingButtonText": "Ver detalles",
     "hobbies": [
         "Traveling",
         "Hiking",
