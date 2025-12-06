@@ -1,33 +1,34 @@
 ---
-import { getCollection } from "astro:content";
-import Heading from "../ui/Heading.astro";
-import Button from "../ui/Button.astro";
+import { getCollection } from 'astro:content';
+import Heading from '../ui/Heading.astro';
+import Button from '../ui/Button.astro';
 
-const [staticData] = await getCollection("staticData");
+const [staticData] = await getCollection('staticData');
 
 const {
-	contactSectionTitle,
-	contactSectionSubtitle,
-	contactSectionButtonText,
-	email,
-	contactSectionButtonIcon,
+  contactSectionTitle,
+  contactSectionSubtitle,
+  contactSectionButtonText,
+  email,
+  contactSectionButtonIcon,
 } = staticData.data;
 ---
 
 <section>
-	<div
-		class="w-full border-b bg-linear-to-b from-mint-100 to-transparent dark:from-mint-800 dark:border-mint-950 border-mint-100"
-	>
-		<div class="mx-auto px-8 py-24 max-sm:py-12 max-w-5xl flex flex-col gap-4 items-center md:flex-row md:justify-between">
-			<div class="max-w-lg">
-
-				<Heading
-				text={contactSectionTitle}
-				textGradient={contactSectionSubtitle}
-				level={1}
-				/>
-			</div>
-			<Button text={contactSectionButtonText} link="hahah" variant={"dark"} />
-		</div>
-	</div>
+  <div
+    class='from-mint-100 dark:from-mint-800 dark:border-mint-950 border-mint-100 w-full border-b bg-linear-to-b to-transparent'
+  >
+    <div
+      class='mx-auto flex max-w-5xl flex-col items-center gap-4 px-8 py-24 max-sm:py-12 md:flex-row md:justify-between'
+    >
+      <div class='max-w-lg'>
+        <Heading
+          text={contactSectionTitle}
+          textGradient={contactSectionSubtitle}
+          level={1}
+        />
+      </div>
+      <Button text={contactSectionButtonText} link='hahah' variant={'dark'} />
+    </div>
+  </div>
 </section>

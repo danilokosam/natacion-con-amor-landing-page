@@ -1,10 +1,10 @@
 ---
-import Button from "../ui/Button.astro";
-import Heading from "../ui/Heading.astro";
-import { Icon } from "astro-icon/components";
-import { getCollection } from "astro:content";
+import Button from '../ui/Button.astro';
+import Heading from '../ui/Heading.astro';
+import { Icon } from 'astro-icon/components';
+import { getCollection } from 'astro:content';
 
-const [staticData] = await getCollection("staticData");
+const [staticData] = await getCollection('staticData');
 
 // Falta incorporar iconos
 const {
@@ -20,84 +20,84 @@ const {
 ---
 
 <section
-  class="scroll-m-16 px-8 max-sm:px-4 py-8"
-  id="inicio"
-  aria-label="Professional profile and introduction"
+  class='scroll-m-16 px-8 py-8 max-sm:px-4'
+  id='inicio'
+  aria-label='Professional profile and introduction'
 >
   <div
-    class="mx-auto mb-4 h-96 w-full max-w-7xl rounded-2xl bg-linear-to-r from-mint-300 dark:from-mint-600 to-mint-50 dark:to-mint-200/5 hover:to-mint-300/30 dark:hover:to-mint-600/30 p-[.2rem] max-md:h-auto"
+    class='from-mint-300 dark:from-mint-600 to-mint-50 dark:to-mint-200/5 hover:to-mint-300/30 dark:hover:to-mint-600/30 mx-auto mb-4 h-96 w-full max-w-7xl rounded-2xl bg-linear-to-r p-[.2rem] max-md:h-auto'
   >
     <div
-      class="group relative z-0 flex h-full items-center justify-center gap-8 overflow-hidden rounded-2xl bg-linear-to-tr from-riptide-100 to-white p-4 transition-all hover:shadow-[0_10px_50px_rgba(59,130,246,0.2)] dark:bg-linear-to-r dark:from-mint-950 dark:to-zinc-950 dark:overflow-hidden max-md:w-full max-md:gap-3 max-lg:gap-2 max-sm:flex-col dark:before:bg-[radial-gradient(circle,rgba(59,130,246)_0,rgba(23,37,84)_100%)] before:bg-[radial-gradient(circle,rgba(153,204,255)_0,rgba(189,222,255)_100%)] before:absolute before:left-65 before:top-10 before:h-[40%] before:aspect-square before:rounded-full before:blur-3xl before:opacity-80 before:-z-10 before:transition hover:before:animate-pulse"
+      class='group from-riptide-100 dark:from-mint-950 relative z-0 flex h-full items-center justify-center gap-8 overflow-hidden rounded-2xl bg-linear-to-tr to-white p-4 transition-all before:absolute before:top-10 before:left-65 before:-z-10 before:aspect-square before:h-[40%] before:rounded-full before:bg-[radial-gradient(circle,rgba(153,204,255)_0,rgba(189,222,255)_100%)] before:opacity-80 before:blur-3xl before:transition hover:shadow-[0_10px_50px_rgba(59,130,246,0.2)] hover:before:animate-pulse max-lg:gap-2 max-md:w-full max-md:gap-3 max-sm:flex-col dark:overflow-hidden dark:bg-linear-to-r dark:to-zinc-950 dark:before:bg-[radial-gradient(circle,rgba(59,130,246)_0,rgba(23,37,84)_100%)]'
     >
-      <div class="aspect-square h-4/5 max-md:size-32">
+      <div class='aspect-square h-4/5 max-md:size-32'>
         <div
-          class="group-hover:scale-105 relative z-10 flex w-full cursor-pointer items-center overflow-hidden rounded-full p-0.5 transition-all duration-500"
+          class='relative z-10 flex w-full cursor-pointer items-center overflow-hidden rounded-full p-0.5 transition-all duration-500 group-hover:scale-105'
         >
           <div
-            class="absolute inset-0 h-full w-full rounded-fullfrom-transparent to-riptide-500 dark:from-transparent f dark:to-mint-300 animate-rotate-border bg-conic/[from_var(--border-angle)]"
+            class='rounded-fullfrom-transparent to-riptide-500 f dark:to-mint-300 animate-rotate-border absolute inset-0 h-full w-full bg-conic/[from_var(--border-angle)] dark:from-transparent'
           >
           </div>
-          <div class="relative z-20 flex w-full rounded-full bg-mint-900">
+          <div class='bg-mint-900 relative z-20 flex w-full rounded-full'>
             <div
-              class="w-full aspect-square rounded-full bg-center bg-cover"
+              class='aspect-square w-full rounded-full bg-cover bg-center'
               style={`background-image: url(${profileImage})`}
               aria-label={profileAlt}
             >
               <a
                 href={profileLink}
-                class="flex h-full w-full"
-                aria-label="View about me page"></a>
+                class='flex h-full w-full'
+                aria-label='View about me page'></a>
             </div>
           </div>
         </div>
       </div>
 
       <div
-        class="flex h-full w-7/12 flex-col justify-center gap-4 p-4 max-md:w-full max-md:gap-2"
+        class='flex h-full w-7/12 flex-col justify-center gap-4 p-4 max-md:w-full max-md:gap-2'
       >
         <h1
-          class="text-4xl font-black leading-none text-blacktext dark:text-white max-xl:text-3xl max-lg:text-2xl max-sm:text-center"
+          class='text-blacktext text-4xl leading-none font-black max-xl:text-3xl max-lg:text-2xl max-sm:text-center dark:text-white'
         >
           {profileName} 👋
         </h1>
         <p
-          class="mb-0 text-lg font-semibold leading-8 text-blacktext dark:text-gray-200 max-xl:text-base"
+          class='text-blacktext mb-0 text-lg leading-8 font-semibold max-xl:text-base dark:text-gray-200'
         >
           <span
-            class="bg-linear-to-r from-riptide-500 to-mint-500 bg-clip-text font-black text-transparent dark:from-riptide-300 dark:to-mint-200"
+            class='from-riptide-500 to-mint-500 dark:from-riptide-300 dark:to-mint-200 bg-linear-to-r bg-clip-text font-black text-transparent'
             >{profileTitle}</span
           > con <span
-            class="bg-linear-to-r from-riptide-500 to-mint-500 bg-clip-text font-black text-transparent dark:from-riptide-300 dark:to-mint-200"
+            class='from-riptide-500 to-mint-500 dark:from-riptide-300 dark:to-mint-200 bg-linear-to-r bg-clip-text font-black text-transparent'
             >8 años de experiencia</span
           >, apasionada por la enseñanza y el desarrollo de mis alumnos.
           Disfruto ver cómo superan sus límites y alcanzan cada meta. 🏊‍♀️
         </p>
 
-        <div class="flex gap-4 max-sm:flex-col max-sm:items-center">
+        <div class='flex gap-4 max-sm:flex-col max-sm:items-center'>
           <Button
-            link={"mailto:" + email}
+            link={'mailto:' + email}
             text={contactSectionButtonText}
             iconName={emailIconName}
           />
           <Button
             link={profileLink}
-            text="Acerca de mi"
-            iconName="person"
-            variant="dark"
+            text='Acerca de mi'
+            iconName='person'
+            variant='dark'
           />
         </div>
       </div>
     </div>
   </div>
   <div
-    class="mx-auto grid max-w-7xl grid-cols-2 grid-rows-4 max-sm:gap-3 gap-4 max-md:h-[80vh] max-sm:h-[900px] max-xl:h-[550px] xl:h-[700px] md:grid-cols-4 md:grid-rows-2"
+    class='mx-auto grid max-w-7xl grid-cols-2 grid-rows-4 gap-4 max-xl:h-[550px] max-md:h-[80vh] max-sm:h-[900px] max-sm:gap-3 md:grid-cols-4 md:grid-rows-2 xl:h-[700px]'
   >
     <div
-      class="col-start-2 row-start-2 flex flex-col gap-3 rounded-2xl border border-emerald-50 bg-linear-to-r from-riptide-200 to-mint-200 p-8 dark:border-zinc-800 dark:border-2 dark:bg-zinc-800 dark:bg-gradient-radial dark:from-riptide-500 dark:to-mint-500 max-md:gap-0 max-xl:p-5 max-md:p-4 max-lg:gap-1 md:col-start-4"
+      class='from-riptide-200 to-mint-200 dark:bg-gradient-radial dark:from-riptide-500 dark:to-mint-500 col-start-2 row-start-2 flex flex-col gap-3 rounded-2xl border border-emerald-50 bg-linear-to-r p-8 max-xl:p-5 max-lg:gap-1 max-md:gap-0 max-md:p-4 md:col-start-4 dark:border-2 dark:border-zinc-800 dark:bg-zinc-800'
     >
-      <div class="flex flex-col-reverse items-start gap-4 max-md:gap-2">
-        <Heading text="Foto 4" level={2} />
+      <div class='flex flex-col-reverse items-start gap-4 max-md:gap-2'>
+        <Heading text='Foto 4' level={2} />
       </div>
 
       <!-- <div class="overflow-y-auto">
@@ -106,65 +106,65 @@ const {
     </div>
 
     <div
-      class="col-start-1 row-start-2 rounded-2xl bg-linear-to-r from-mint-300 dark:from-mint-600 to-mint-50 dark:to-mint-200/5 hover:to-mint-300/30 dark:hover:to-mint-600/30 p-[.2rem] transition-all ease-in duration-150 hover:scale-105 hover:shadow-[0_20px_50px_rgba(59,130,246,0.4)] z-40 md:col-start-3"
+      class='from-mint-300 dark:from-mint-600 to-mint-50 dark:to-mint-200/5 hover:to-mint-300/30 dark:hover:to-mint-600/30 z-40 col-start-1 row-start-2 rounded-2xl bg-linear-to-r p-[.2rem] transition-all duration-150 ease-in hover:scale-105 hover:shadow-[0_20px_50px_rgba(59,130,246,0.4)] md:col-start-3'
     >
-      <div class="h-full w-full overflow-hidden rounded-2xl dark:bg-zinc-900">
+      <div class='h-full w-full overflow-hidden rounded-2xl dark:bg-zinc-900'>
         <a
-          class="relative h-full w-full overflow-hidden rounded-2xl bg-linear-to-tr from-riptide-100 to-white dark:from-transparent dark:bg-linear-to-bl dark:to-transparent"
+          class='from-riptide-100 relative h-full w-full overflow-hidden rounded-2xl bg-linear-to-tr to-white dark:bg-linear-to-bl dark:from-transparent dark:to-transparent'
         >
           <div
-            class="relative flex h-full flex-col gap-8 p-8 dark:before:bg-[radial-gradient(circle,rgba(59,130,246)_0,rgba(23,37,84)_100%)] before:bg-[radial-gradient(circle,rgba(153,204,255)_0,rgba(189,222,255)_100%)] before:absolute before:left-30 before:bottom-30 before:h-[30%] before:aspect-square before:rounded-full before:blur-3xl before:opacity-90 before:transition before:z-0 max-xl:p-5 max-md:p-4 xl:before:bottom-10"
+            class='relative flex h-full flex-col gap-8 p-8 before:absolute before:bottom-30 before:left-30 before:z-0 before:aspect-square before:h-[30%] before:rounded-full before:bg-[radial-gradient(circle,rgba(153,204,255)_0,rgba(189,222,255)_100%)] before:opacity-90 before:blur-3xl before:transition max-xl:p-5 max-md:p-4 xl:before:bottom-10 dark:before:bg-[radial-gradient(circle,rgba(59,130,246)_0,rgba(23,37,84)_100%)]'
           >
-            <div class="z-2">
-              <Heading text="Foto 3" level={3} />
+            <div class='z-2'>
+              <Heading text='Foto 3' level={3} />
             </div>
 
             <Icon
-              class="absolute -bottom-10 left-30 size-50 text-mint-500/30 group-hover:animate-pulse ease-in-out max-sm:left-10 max-md:left-30 xl:size-56 xl:-bottom-5 xl:-right-24"
-              name="github"
-              aria-hidden="true"
+              class='text-mint-500/30 absolute -bottom-10 left-30 size-50 ease-in-out group-hover:animate-pulse max-md:left-30 max-sm:left-10 xl:-right-24 xl:-bottom-5 xl:size-56'
+              name='github'
+              aria-hidden='true'
             />
           </div>
         </a>
       </div>
     </div>
     <div
-      class="col-span-2 col-start-1 row-start-1 rounded-2xl bg-linear-to-r from-mint-300 dark:from-mint-600 to-mint-50 dark:to-mint-200/5 hover:to-mint-300/30 dark:hover:to-mint-600/30 p-[.2rem] md:col-start-3"
+      class='from-mint-300 dark:from-mint-600 to-mint-50 dark:to-mint-200/5 hover:to-mint-300/30 dark:hover:to-mint-600/30 col-span-2 col-start-1 row-start-1 rounded-2xl bg-linear-to-r p-[.2rem] md:col-start-3'
     >
       <article
-        class="group relative z-0 flex h-full w-full flex-col overflow-hidden rounded-2xl bg-linear-to-tr from-riptide-100 to-mint-100 p-6 transition hover:shadow-[0_10px_50px_rgba(59,130,246,0.2)] dark:bg-linear-to-r dark:from-mint-900 dark:to-mint-950 dark:overflow-hidden max-md:p-4 gap-6 max-md:gap-3 max-lg:gap-4 dark:before:bg-[radial-gradient(circle,rgba(59,130,246)_0,rgba(23,37,84)_100%)] before:bg-[radial-gradient(circle,rgba(153,204,255)_0,rgba(189,222,255)_100%)] before:absolute before:left-30 before:bottom-0 before:h-[80%] before:aspect-square before:rounded-full before:blur-3xl dark:before:opacity-80 before:opacity-30 before:-z-10 before:transition"
+        class='group from-riptide-100 to-mint-100 dark:from-mint-900 dark:to-mint-950 relative z-0 flex h-full w-full flex-col gap-6 overflow-hidden rounded-2xl bg-linear-to-tr p-6 transition before:absolute before:bottom-0 before:left-30 before:-z-10 before:aspect-square before:h-[80%] before:rounded-full before:bg-[radial-gradient(circle,rgba(153,204,255)_0,rgba(189,222,255)_100%)] before:opacity-30 before:blur-3xl before:transition hover:shadow-[0_10px_50px_rgba(59,130,246,0.2)] max-lg:gap-4 max-md:gap-3 max-md:p-4 dark:overflow-hidden dark:bg-linear-to-r dark:before:bg-[radial-gradient(circle,rgba(59,130,246)_0,rgba(23,37,84)_100%)] dark:before:opacity-80'
       >
-        <div class="flex items-center gap-4 max-md:gap-2">
+        <div class='flex items-center gap-4 max-md:gap-2'>
           <Icon
-            class="text-3xl dark:text-white text-mint-500 max-md:text-2xl max-sm:text-sm"
-            name="dashboard"
-            aria-hidden="true"
+            class='text-mint-500 text-3xl max-md:text-2xl max-sm:text-sm dark:text-white'
+            name='dashboard'
+            aria-hidden='true'
           />
-          <Heading text="Foto" textGradient="2" level={3} />
+          <Heading text='Foto' textGradient='2' level={3} />
         </div>
-        <div class="overflow-y-auto">
+        <div class='overflow-y-auto'>
           <!-- <Tools /> -->
         </div>
       </article>
     </div>
 
     <div
-      class="col-span-2 row-span-2 rounded-2xl bg-linear-to-r from-mint-300 dark:from-mint-600 to-mint-50 dark:to-mint-200/5 p-[.2rem] hover:to-mint-300/30 dark:hover:to-mint-600/30 md:col-start-1 md:row-start-1"
+      class='from-mint-300 dark:from-mint-600 to-mint-50 dark:to-mint-200/5 hover:to-mint-300/30 dark:hover:to-mint-600/30 col-span-2 row-span-2 rounded-2xl bg-linear-to-r p-[.2rem] md:col-start-1 md:row-start-1'
     >
       <article
-        class="group relative flex h-full flex-col justify-start overflow-hidden rounded-2xl bg-linear-to-br from-riptide-100 to-white dark:from-mint-950 dark:to-zinc-950 p-8 transition-all hover:shadow-[0_20px_50px_rgba(59,130,246,0.4)] max-md:p-6 dark:before:bg-[radial-gradient(circle,rgba(59,130,246)_0,rgba(23,37,84)_100%)] before:bg-[radial-gradient(circle,rgba(153,204,255)_0,rgba(189,222,255)_100%)] before:absolute before:left-1/2 before:bottom-30 before:h-[30%] before:aspect-square before:rounded-full before:blur-3xl before:opacity-70 before:transition before:z-0 hover:before:animate-pulse xl:before:bottom-2/5"
+        class='group from-riptide-100 dark:from-mint-950 relative flex h-full flex-col justify-start overflow-hidden rounded-2xl bg-linear-to-br to-white p-8 transition-all before:absolute before:bottom-30 before:left-1/2 before:z-0 before:aspect-square before:h-[30%] before:rounded-full before:bg-[radial-gradient(circle,rgba(153,204,255)_0,rgba(189,222,255)_100%)] before:opacity-70 before:blur-3xl before:transition hover:shadow-[0_20px_50px_rgba(59,130,246,0.4)] hover:before:animate-pulse max-md:p-6 xl:before:bottom-2/5 dark:to-zinc-950 dark:before:bg-[radial-gradient(circle,rgba(59,130,246)_0,rgba(23,37,84)_100%)]'
       >
         <a
-          href="#projects"
-          class="absolute left-0 top-0 z-40 h-full w-full bg-transparent"
-          aria-label="View projects section"></a>
-        <div class="flex items-center gap-4 max-md:gap-2">
+          href='#projects'
+          class='absolute top-0 left-0 z-40 h-full w-full bg-transparent'
+          aria-label='View projects section'></a>
+        <div class='flex items-center gap-4 max-md:gap-2'>
           <Icon
-            class="text-3xl dark:text-white text-mint-500 max-md:text-2xl max-sm:text-xl"
-            name="code"
-            aria-hidden="true"
+            class='text-mint-500 text-3xl max-md:text-2xl max-sm:text-xl dark:text-white'
+            name='code'
+            aria-hidden='true'
           />
-          <Heading text="Foto 1" level={3} />
+          <Heading text='Foto 1' level={3} />
         </div>
 
         <!-- <img

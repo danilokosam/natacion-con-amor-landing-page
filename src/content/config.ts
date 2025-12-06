@@ -1,7 +1,7 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection, z } from 'astro:content';
 
 const jsonDataCollection = defineCollection({
-  type: "data",
+  type: 'data',
   schema: z.object({
     //Define JSON-file structure
     profileImage: z.string(),
