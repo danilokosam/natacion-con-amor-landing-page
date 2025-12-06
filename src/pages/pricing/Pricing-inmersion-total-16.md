@@ -1,19 +1,20 @@
 ---
 layout: ../../layouts/Layout.astro
 pubDate: 2025-04-05
-title: 'Plan Flexible 4'
+title: 'Plan Inmersión Total 16'
 description:
   'Clases de natación de 1 hora, en grupos reducidos de máximo 4 alumnos,
   enfocadas en mejorar técnica, confianza y habilidades básicas en un ambiente
   seguro y personalizado.'
-messageCta: 'Máxima adaptabilidad para dar tus primeras brazadas'
-classesQuantity: '4'
-classesPrice: '160€'
+messageCta: 'Diseñado para acelerar tus resultados y dominar la técnica'
+classesQuantity: '12'
+classesPrice: '360€'
 recommended: false
-plan: 1
+plan: 2
+pageURL: "/pricing/plan-inmersion-total-16"
 incluye:
-  - '4 clases'
-  - '4 horas de clase'
+  - '8 clases'
+  - '8 horas de clase'
   - 'Instructor certificado'
   - 'Grupos reducidos (máx 4 personas)'
 image:

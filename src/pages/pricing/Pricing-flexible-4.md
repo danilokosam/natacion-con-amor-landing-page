@@ -1,24 +1,26 @@
 ---
 layout: ../../layouts/Layout.astro
 pubDate: 2025-04-05
-title: 'Plan Flexible 8'
+title: 'Plan Flexible 4'
 description:
   'Clases de natación de 1 hora, en grupos reducidos de máximo 4 alumnos,
   enfocadas en mejorar técnica, confianza y habilidades básicas en un ambiente
   seguro y personalizado.'
 messageCta: 'Máxima adaptabilidad para dar tus primeras brazadas'
-classesQuantity: '8'
-classesPrice: '260€'
+classesQuantity: '4'
+classesPrice: '160€'
 recommended: false
 plan: 1
+pageURL: "/pricing/plan-flexible-4"
 incluye:
-  - '8 clases'
-  - '8 horas de clase'
+  - '4 clases'
+  - '4 horas de clase'
   - 'Instructor certificado'
   - 'Grupos reducidos (máx 4 personas)'
 image:
   url: 'https://placehold.co/600x400'
   alt: 'Thumbnail of Astro arches.'
+
 ---
 
 **NeonMint** is a modern, minimalist web template created for developers,

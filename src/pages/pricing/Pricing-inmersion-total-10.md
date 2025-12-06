@@ -1,16 +1,17 @@
 ---
 layout: ../../layouts/Layout.astro
 pubDate: 2025-04-05
-title: 'Plan Inmersión Total 12'
+title: 'Plan Inmersión Total 10'
 description:
   'Clases de natación de 1 hora, en grupos reducidos de máximo 4 alumnos,
   enfocadas en mejorar técnica, confianza y habilidades básicas en un ambiente
   seguro y personalizado.'
 messageCta: 'Diseñado para acelerar tus resultados y dominar la técnica'
-classesQuantity: '12'
-classesPrice: '310€'
-recommended: true
+classesQuantity: '10'
+classesPrice: '290€'
+recommended: false
 plan: 2
+pageURL: "/pricing/plan-inmersion-total-10"
 incluye:
   - '8 clases'
   - '8 horas de clase'
