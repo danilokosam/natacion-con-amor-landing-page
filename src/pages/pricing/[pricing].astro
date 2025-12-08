@@ -1,0 +1,16 @@
+---
+import type { GetStaticPaths } from "astro";
+export const getStaticPaths = (() => {
+    
+    return [
+        {params: {pricing: "plan-flexible-4"}},
+        {params: {pricing: "plan-flexible-6"}},
+        {params: {pricing: "plan-flexible-8"}},
+        {params: {pricing: "plan-inmersion-total-10"}},
+        {params: {pricing: "plan-inmersion-total-12"}},
+        {params: {pricing: "plan-inmersion-total-16"}},
+    ];
+}) satisfies GetStaticPaths;
+---
+
+<h1>hello</h1>

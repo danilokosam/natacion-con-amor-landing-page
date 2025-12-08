@@ -7,7 +7,7 @@ const [staticData] = await getCollection('staticData');
 
 const { pricingButtonText } = staticData.data;
 
-const { title, classesPrice, messageCta, incluye, recommended } = Astro.props;
+const { title, classesPrice, messageCta, incluye, recommended, pageURL } = Astro.props;
 ---
 
 <article
@@ -39,8 +39,7 @@ const { title, classesPrice, messageCta, incluye, recommended } = Astro.props;
         >{classesPrice}</strong
       > /mes
     </p>
-
-    <Button link='#' text={pricingButtonText} />
+    <Button link={`${pageURL}`} text={pricingButtonText} />
 
     <ul class='list-disc px-4 text-start'>
       {

@@ -1,19 +1,20 @@
 ---
 layout: ../../layouts/Layout.astro
 pubDate: 2025-04-05
-title: 'Plan Flexible 6'
+title: 'Plan Flexible 8'
 description:
   'Clases de natación de 1 hora, en grupos reducidos de máximo 4 alumnos,
   enfocadas en mejorar técnica, confianza y habilidades básicas en un ambiente
   seguro y personalizado.'
 messageCta: 'Máxima adaptabilidad para dar tus primeras brazadas'
-classesQuantity: '6'
-classesPrice: '210€'
-recommended: true
+classesQuantity: '8'
+classesPrice: '260€'
+recommended: false
 plan: 1
+pageURL: "/pricing/plan-flexible-8"
 incluye:
-  - '6 clases'
-  - '6 horas de clase'
+  - '8 clases'
+  - '8 horas de clase'
   - 'Instructor certificado'
   - 'Grupos reducidos (máx 4 personas)'
 image:
