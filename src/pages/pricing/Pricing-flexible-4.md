@@ -11,7 +11,7 @@ classesQuantity: '4'
 classesPrice: '160€'
 recommended: false
 plan: 1
-pageURL: "/pricing/plan-flexible-4"
+pageURL: '/pricing/plan-flexible-4'
 incluye:
   - '4 clases'
   - '4 horas de clase'
@@ -20,7 +20,6 @@ incluye:
 image:
   url: 'https://placehold.co/600x400'
   alt: 'Thumbnail of Astro arches.'
-
 ---
 
 **NeonMint** is a modern, minimalist web template created for developers,

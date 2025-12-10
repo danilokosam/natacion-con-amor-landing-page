@@ -11,7 +11,7 @@ classesQuantity: '12'
 classesPrice: '360€'
 recommended: false
 plan: 2
-pageURL: "/pricing/plan-inmersion-total-16"
+pageURL: '/pricing/plan-inmersion-total-16'
 incluye:
   - '8 clases'
   - '8 horas de clase'

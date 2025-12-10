@@ -11,7 +11,7 @@ classesQuantity: '6'
 classesPrice: '210€'
 recommended: true
 plan: 1
-pageURL: "/pricing/plan-flexible-6"
+pageURL: '/pricing/plan-flexible-6'
 incluye:
   - '6 clases'
   - '6 horas de clase'

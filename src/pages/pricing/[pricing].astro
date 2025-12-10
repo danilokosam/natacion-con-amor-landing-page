@@ -1,16 +1,44 @@
 ---
-import type { GetStaticPaths } from "astro";
+import type { GetStaticPaths } from 'astro';
+import Layout from '../../layouts/Layout.astro';
+// import { getCollection } from "astro:content";
+
+//* se utiliza para generar los paths estáticos para cada pagina del plan
 export const getStaticPaths = (() => {
-    
-    return [
-        {params: {pricing: "plan-flexible-4"}},
-        {params: {pricing: "plan-flexible-6"}},
-        {params: {pricing: "plan-flexible-8"}},
-        {params: {pricing: "plan-inmersion-total-10"}},
-        {params: {pricing: "plan-inmersion-total-12"}},
-        {params: {pricing: "plan-inmersion-total-16"}},
-    ];
+  return [
+    { params: { pricing: 'plan-flexible-4' } },
+    { params: { pricing: 'plan-flexible-6' } },
+    { params: { pricing: 'plan-flexible-8' } },
+    { params: { pricing: 'plan-inmersion-total-10' } },
+    { params: { pricing: 'plan-inmersion-total-12' } },
+    { params: { pricing: 'plan-inmersion-total-16' } },
+  ];
 }) satisfies GetStaticPaths;
+
+//aquí recuperamos el path actual de la pagina desde la url
+const { pricing } = Astro.params;
+
+// luego obtenemos los datos de las colecciones
+const allPosts = await Astro.glob('../../pages/pricing/*.md');
+
+// para recuperar el post que debemos mostrar en cada pagina
+const pageInfo = allPosts.find(
+  (post) => post.frontmatter.pageURL === `/pricing/${pricing}`,
+);
+
+// manejamos el error si no existe una pagina estática
+if (!pageInfo) {
+  return Astro.redirect('/404');
+}
+
+import { slide } from 'astro:transitions';
 ---
 
-<h1>hello</h1>
+<Layout>
+  <section class='container mx-auto flex max-w-7xl flex-col' >
+    <div transition:name="plan" transition:animate={slide({ duration: '0.4s' })}>
+      <h2 class="text-4xl font-bold" > {pageInfo.frontmatter.title}</h2>
+      <p>{pageInfo.frontmatter.description}</p>
+    </div>
+  </section>
+</Layout>

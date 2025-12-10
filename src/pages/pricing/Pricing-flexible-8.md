@@ -11,7 +11,7 @@ classesQuantity: '8'
 classesPrice: '260€'
 recommended: false
 plan: 1
-pageURL: "/pricing/plan-flexible-8"
+pageURL: '/pricing/plan-flexible-8'
 incluye:
   - '8 clases'
   - '8 horas de clase'
