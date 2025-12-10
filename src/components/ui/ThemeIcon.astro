@@ -35,9 +35,8 @@ import { Icon } from 'astro-icon/components';
 </style>
 
 <script is:inline>
-  // Execute immediately before the page loads
-  (function () {
-    // Function to determine the initial theme preference
+  // Function to apply theme from localStorage
+  function applyTheme() {
     const theme = (() => {
       // 1. Check for user's manually saved preference in localStorage
       if (
@@ -62,7 +61,10 @@ import { Icon } from 'astro-icon/components';
     }
     // Store the current theme in localStorage for persistence
     window.localStorage.setItem('theme', theme);
-  })();
+  }
+
+  // Execute immediately on page load
+  applyTheme();
 
   // Listen for changes in system preferences (e.g., user changes OS theme while page is open)
   window
@@ -91,8 +93,20 @@ import { Icon } from 'astro-icon/components';
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   };
 
-  // Attach the click handler to the theme toggle button
-  document
-    .getElementById('themeToggle')
-    .addEventListener('click', handleToggleClick);
+  // Function to attach event listener to the button
+  const attachThemeToggle = () => {
+    const button = document.getElementById('themeToggle');
+    if (button) {
+      button.addEventListener('click', handleToggleClick);
+    }
+  };
+
+  // Attach on initial load
+  attachThemeToggle();
+
+  // Re-apply theme and re-attach listener after View Transitions navigation
+  document.addEventListener('astro:page-load', () => {
+    applyTheme();
+    attachThemeToggle();
+  });
 </script>
