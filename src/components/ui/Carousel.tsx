@@ -55,7 +55,7 @@ const Carousel = () => {
         }
       `}</style>
       <div
-        className='relative mx-auto w-full max-w-full overflow-hidden'
+        className='relative mx-auto w-full max-w-full overflow-hidden mb-16'
         onMouseEnter={() => setStopScroll(true)}
         onMouseLeave={() => setStopScroll(false)}
       >
