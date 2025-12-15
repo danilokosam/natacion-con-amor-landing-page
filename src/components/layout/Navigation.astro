@@ -15,7 +15,7 @@ const { items = [] }: { items: (keyof typeof menu)[] } = Astro.props as {
 
 // Define the structure of the navigation menu with names and paths for each item.
 const menu = {
-  about: { name: 'Acerca de mi', path: '/acerca-de-mi' },
+  about: { name: 'Acerca de mi', path: '/about-me' },
   // blog: {
   //   name: "Blog",
   //   path: "/blog/",
@@ -40,9 +40,9 @@ const baseClasses = {
 } as const;
 ---
 
-<script>
+<script is:inline>
   // This script runs on the client-side to handle dynamic navigation behavior.
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('astro:page-load', () => {
     // Check if the current page is the homepage.
     const isHome = window.location.pathname === '/';
 
@@ -62,7 +62,7 @@ const baseClasses = {
      * @param {Element} link - The link element to modify.
      * @param {boolean} isActive - Whether the link should be styled as active.
      */
-    function toggleLinkClasses(link: Element, isActive: boolean) {
+    function toggleLinkClasses(link, isActive) {
       if (isActive) {
         link.classList.add(...linkClasses.active);
         link.classList.remove(...linkClasses.inactive);

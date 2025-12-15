@@ -1,0 +1,86 @@
+---
+import Layout from './Layout.astro';
+import Heading from '../components/ui/Heading.astro';
+import NavArticle from '../components/layout/NavArticle.astro';
+import Contact from '../components/porfolio/Contact.astro';
+const { frontmatter } = Astro.props;
+---
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach((heading) => {
+      heading.classList.add('scroll-m-28');
+    });
+  });
+</script>
+<Layout
+  pageTitle={frontmatter.title}
+  description={frontmatter.description}
+  ogimage={frontmatter.image}
+>
+  <section
+    class='mt-5 flex w-full flex-row justify-center gap-6 px-8 py-4 max-sm:px-4'
+  >
+    <div class='w-64 max-xl:hidden'></div>
+
+    <article
+      class='mt-8 flex max-w-3xl flex-col gap-8 rounded-2xl border border-neutral-100 bg-white px-14 pt-8 pb-10 max-md:w-full max-md:px-10 max-sm:mt-0 max-sm:px-6 dark:border-0 dark:bg-transparent'
+    >
+      <div class='mx-auto mb-4 h-auto w-full' id='#'>
+        <div
+          class='dark:from-mint-950 relative z-0 flex w-full flex-col items-center justify-center gap-8 transition-all max-lg:gap-2 max-md:gap-3 dark:to-zinc-950'
+        >
+          <div class='aspect-square h-60 max-md:size-32'>
+            <div
+              class='relative z-10 flex w-full cursor-pointer items-center overflow-hidden rounded-full p-0.5 transition-all duration-500 group-hover:scale-105 dark:p-[1.5px]'
+            >
+              <div
+                class='rounded-fullfrom-transparent to-riptide-500 f dark:to-mint-300 animate-rotate-border absolute inset-0 h-full w-full bg-conic/[from_var(--border-angle)] dark:from-transparent'
+              >
+              </div>
+              <div class='bg-mint-900 relative z-20 flex w-full rounded-full'>
+                <div
+                  class='aspect-square w-full rounded-full bg-[url(/images/efeeleprofile.webp)] bg-cover bg-center'
+                  aria-label='Photo of Fernando Aldair López Ponce (EFEELE) for the blog'
+                >
+                  <a
+                    href='/about-me'
+                    class='flex h-full w-full'
+                    aria-label='View about me page'></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class='flex w-full flex-col justify-center gap-4 max-md:gap-2'>
+            <div class='text-center'>
+              <Heading textGradient='Fernanda Solarte' />
+            </div>
+
+            <p
+              class='text-blacktext mb-0 text-lg leading-8 font-semibold max-xl:text-base dark:text-gray-200'
+            >
+              <b
+                class='from-riptide-400 to-mint-500 dark:to-mint-200 dark:from-riptide-300 bg-linear-to-r bg-clip-text text-transparent'
+                >Profesora de Natación con Amor</b
+              > with <b
+                class='from-riptide-400 to-mint-500 dark:to-mint-200 dark:from-riptide-300 bg-linear-to-r bg-clip-text text-transparent'
+                >8 años de experiencia</b
+              >,apasionada por la enseñanza y el desarrollo de mis alumnos.
+              Disfruto ver cómo superan sus límites y alcanzan cada meta. 🏊‍♀️
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class='flex items-center gap-4'>
+        <Heading text='About' textGradient='me' />
+      </div>
+
+      <div class='markdown text-white' id='content'>
+        <slot />
+      </div>
+    </article>
+    <NavArticle title={frontmatter.title} />
+  </section>
+  <Contact />
+</Layout>
