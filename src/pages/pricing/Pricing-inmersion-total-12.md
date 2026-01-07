@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Layout.astro
 pubDate: 2025-04-05
 title: 'Plan Inmersión Total 12'
 description:

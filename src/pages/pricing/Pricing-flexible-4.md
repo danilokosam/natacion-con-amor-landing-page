@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Layout.astro
 pubDate: 2025-04-05
 title: 'Plan Flexible 4'
 description:
@@ -22,39 +21,43 @@ image:
   alt: 'Thumbnail of Astro arches.'
 ---
 
-**NeonMint** is a modern, minimalist web template created for developers,
-designers, and digital creatives. This project aims to offer an elegant and
-functional visual experience, combining a dark-toned aesthetic with mint green
-accents to highlight content without distractions.
+## 🏊‍♂️ Nuestros Planes de Natación
 
-Developed with **Astro** and styled with **TailwindCSS**, NeonMint focuses on
-speed, modularity, and a component-centered architecture.
+En nuestra escuela de natación ofrecemos planes diseñados para todas las edades y niveles, desde principiantes absolutos hasta nadadores avanzados. Nuestro enfoque se basa en la **seguridad, el aprendizaje progresivo y la mejora continua**, siempre en un entorno controlado y motivador.
 
-## 🧩 Features
+Cada plan ha sido estructurado para adaptarse a las necesidades individuales de los alumnos, garantizando una experiencia personalizada y resultados reales en el agua.
 
-- Responsive and minimalist design
-- Dark mode aesthetic with mint green accents
-- Clean and reusable UI components
-- Ideal for portfolios, dashboards or tech landing pages
-- Modern typography and clear visual hierarchy
-- Developed with **Astro**
-- Styled with **TailwindCSS**
 
-## 💡 Technologies used
+## 🌊 Detalles Plan
 
-- Astro
-- TailwindCSS
-- HTML5
-- JavaScript
+Ideal para quienes se inician en la natación o desean perder el miedo al agua.
 
-## 🌐 Demo
+**Características:**
+- 1 hora por clase  
+- Máximo 4 alumnos por sesión  
+- Introducción a la flotación y respiración  
+- Técnicas básicas de desplazamiento  
+- Ambiente seguro y supervisado  
 
-👉 [View live demo](https://github.com/EFEELE/NeonMint)
+**Recomendado para:**  
+Niños y adultos sin experiencia previa o con nivel inicial.
 
-## 🎯 Objective
 
-The purpose of NeonMint is to combine style and functionality in a clean
-interface that enhances content without overwhelming the user. It's an exercise
-in design and development focused on visual detail and user experience.
+## 🤝 Metodología de Enseñanza
 
-🚀 _Developed by EFEELE._
+- Atención personalizada  
+- Grupos reducidos  
+- Instructores certificados  
+- Progresión adaptada al alumno  
+- Enfoque en técnica, confianza y seguridad  
+
+Nuestro objetivo es que cada alumno disfrute del aprendizaje, gane confianza en el agua y alcance su máximo potencial.
+
+
+## ✨ ¿Por qué elegirnos?
+
+- Instalaciones seguras y controladas  
+- Clases estructuradas y efectivas  
+- Trato cercano y profesional  
+- Resultados visibles desde las primeras clases  
+

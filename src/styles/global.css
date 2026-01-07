@@ -47,6 +47,17 @@
   inherits: false;
   initial-value: 0deg;
 }
+/* Espaciado para párrafos en contenido markdown */
+.prose p, h2{
+  margin-bottom: 1.5rem;
+}
+.prose > h2 {
+  font-size: 1.2em;
+}
+.prose > h2 {
+  font-size: 1.8em;
+}
+
 ::selection {
   @apply bg-mint-500 text-white;
 }

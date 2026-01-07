@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/Layout.astro
 pubDate: 2025-04-05
 title: 'Plan Flexible 6'
 description:
