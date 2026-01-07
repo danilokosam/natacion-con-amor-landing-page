@@ -38,7 +38,9 @@ import Schedule from '../../components/ui/Schedule';
 ---
 
 <Layout>
-  <section class='container mx-auto mt-6 flex max-w-7xl flex-col px-2 md:px-8'>
+  <section
+    class='container mx-auto mt-6 flex max-w-3xl flex-col px-2 text-xl text-pretty md:px-8'
+  >
     <div
       transition:name='plan'
       transition:animate={slide({ duration: '0.4s' })}
@@ -52,13 +54,13 @@ import Schedule from '../../components/ui/Schedule';
       <!-- <p class='dark:text-white'>{pageInfo.frontmatter.description}</p> -->
 
       {/* Contenido del Markdown (fuera del frontmatter) */}
-      <div >
-        <div class="prose dark:prose-invert mt-8 max-w-none text-mint-950 dark:text-white" set:html={pageInfo.compiledContent()} />
+      <div>
+        <div
+          class='prose dark:prose-invert text-mint-950 mt-8 max-w-none dark:text-white flex flex-col gap-4'
+          set:html={pageInfo.compiledContent()}
+        />
       </div>
- <Schedule client:visible>
-  h
- </Schedule>
+      <Schedule client:visible>  </Schedule>
     </div>
-
   </section>
 </Layout>

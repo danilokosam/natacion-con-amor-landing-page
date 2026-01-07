@@ -21,43 +21,41 @@ image:
   alt: 'Thumbnail of Astro arches.'
 ---
 
-## 🏊‍♂️ Nuestros Planes de Natación
-
-En nuestra escuela de natación ofrecemos planes diseñados para todas las edades y niveles, desde principiantes absolutos hasta nadadores avanzados. Nuestro enfoque se basa en la **seguridad, el aprendizaje progresivo y la mejora continua**, siempre en un entorno controlado y motivador.
-
-Cada plan ha sido estructurado para adaptarse a las necesidades individuales de los alumnos, garantizando una experiencia personalizada y resultados reales en el agua.
-
-
-## 🌊 Detalles Plan
-
-Ideal para quienes se inician en la natación o desean perder el miedo al agua.
-
-**Características:**
-- 1 hora por clase  
-- Máximo 4 alumnos por sesión  
-- Introducción a la flotación y respiración  
-- Técnicas básicas de desplazamiento  
-- Ambiente seguro y supervisado  
-
-**Recomendado para:**  
-Niños y adultos sin experiencia previa o con nivel inicial.
+### Ideal para quienes se inician en la natación o desean perder el miedo al agua, 🥽 Recomendado para Niños y adultos sin experiencia previa o con nivel inicial.
+---
+## Características:
+- • 1 hora por clase
+- • Máximo 4 alumnos por sesión
+- • Introducción a la flotación y respiración
+- • Técnicas básicas de desplazamiento
+- • Ambiente seguro y supervisado
 
 
 ## 🤝 Metodología de Enseñanza
 
-- Atención personalizada  
-- Grupos reducidos  
-- Instructores certificados  
-- Progresión adaptada al alumno  
-- Enfoque en técnica, confianza y seguridad  
+- • Atención personalizada
+- • Grupos reducidos
+- • Instructores certificados
+- • Progresión adaptada al alumno
+- • Enfoque en técnica, confianza y seguridad
 
-Nuestro objetivo es que cada alumno disfrute del aprendizaje, gane confianza en el agua y alcance su máximo potencial.
+Nuestro objetivo es que cada alumno disfrute del aprendizaje, gane confianza en
+el agua y alcance su máximo potencial.
 
+## 🏊‍♂️ Nuestros Planes de Natación
+
+En nuestra escuela de natación ofrecemos planes diseñados para todas las edades
+y niveles, desde principiantes absolutos hasta nadadores avanzados. Nuestro
+enfoque se basa en la **seguridad, el aprendizaje progresivo y la mejora
+continua**, siempre en un entorno controlado y motivador.
+
+Cada plan ha sido estructurado para adaptarse a las necesidades individuales de
+los alumnos, garantizando una experiencia personalizada y resultados reales en
+el agua.
 
 ## ✨ ¿Por qué elegirnos?
 
-- Instalaciones seguras y controladas  
-- Clases estructuradas y efectivas  
-- Trato cercano y profesional  
-- Resultados visibles desde las primeras clases  
-
+- Instalaciones seguras y controladas
+- Clases estructuradas y efectivas
+- Trato cercano y profesional
+- Resultados visibles desde las primeras clases
