@@ -21,39 +21,42 @@ image:
   alt: 'Thumbnail of Astro arches.'
 ---
 
-**NeonMint** is a modern, minimalist web template created for developers,
-designers, and digital creatives. This project aims to offer an elegant and
-functional visual experience, combining a dark-toned aesthetic with mint green
-accents to highlight content without distractions.
+### Ideal para quienes son apasionados por la natación y tienen poco tiempo libre, desean aprender y perfeccionar su técnica y hacer de la actividad una disciplina, recomendado para niños y adultos con experiencia previa.
+---
+## Características:
+- • 1 hora por clase (10 clases)
+- • Máximo 4 alumnos por sesión
+- • Ejercicios de flotación y respiración
+- • Técnicas intermedias y avanzadas de desplazamiento
+- • Ambiente seguro y supervisado
 
-Developed with **Astro** and styled with **TailwindCSS**, NeonMint focuses on
-speed, modularity, and a component-centered architecture.
 
-## 🧩 Features
+## 🤝 Metodología de Enseñanza
 
-- Responsive and minimalist design
-- Dark mode aesthetic with mint green accents
-- Clean and reusable UI components
-- Ideal for portfolios, dashboards or tech landing pages
-- Modern typography and clear visual hierarchy
-- Developed with **Astro**
-- Styled with **TailwindCSS**
+- • Atención personalizada
+- • Grupos reducidos
+- • Instructores certificados
+- • Progresión adaptada al alumno
+- • Enfoque en técnica, confianza y seguridad
 
-## 💡 Technologies used
+Nuestro objetivo es que cada alumno disfrute del aprendizaje, gane confianza en
+el agua y alcance su máximo potencial.
 
-- Astro
-- TailwindCSS
-- HTML5
-- JavaScript
+## 🏊‍♂️ Nuestros Planes de Natación
 
-## 🌐 Demo
+En nuestra escuela de natación ofrecemos planes diseñados para todas las edades
+y niveles, desde principiantes absolutos hasta nadadores avanzados. Nuestro
+enfoque se basa en la **seguridad, el aprendizaje progresivo y la mejora
+continua**, siempre en un entorno controlado y motivador.
 
-👉 [View live demo](https://github.com/EFEELE/NeonMint)
+Cada plan ha sido estructurado para adaptarse a las necesidades individuales de
+los alumnos, garantizando una experiencia personalizada y resultados reales en
+el agua.
 
-## 🎯 Objective
+## ✨ ¿Por qué elegirnos?
 
-The purpose of NeonMint is to combine style and functionality in a clean
-interface that enhances content without overwhelming the user. It's an exercise
-in design and development focused on visual detail and user experience.
+- Instalaciones seguras y controladas
+- Clases estructuradas y efectivas
+- Trato cercano y profesional
+- Resultados visibles desde las primeras clases
 
-🚀 _Developed by EFEELE._
